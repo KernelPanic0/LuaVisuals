@@ -348,7 +348,8 @@ plrs.ChildAdded:Connect(function(childThatsAdded)
 
 
         function drawSkeleton()
-            local joseph = game:GetService("RunService").RenderStepped:Connect(function()
+            local joseph
+            joseph = game:GetService("RunService").RenderStepped:Connect(function()
                 if childThatsAdded and game.Players:GetPlayerFromCharacter(childThatsAdded) ~= lplr then
                     local VECTOR, onScreen = camera:worldToViewportPoint(childThatsAdded.HumanoidRootPart.Position)
                     -- 3 DIMENSIONAL OBJECTS --
@@ -475,21 +476,33 @@ plrs.ChildAdded:Connect(function(childThatsAdded)
                         shoulderLine.Visible = false
                         hipLine.Visible = false
                     end
-                if isdead(childThatsAdded) then
-                    Head:Remove()
-                    rightLowerArm:Remove()
-                    leftLowerArm:Remove()
-                    rightUpperArm:Remove()
-                    leftUpperArm:Remove()
-                    Torso:Remove()
-                    rightUpperLeg:Remove()
-                    leftUpperLeg:Remove()
-                    rightLowerLeg:Remove()
-                    leftLowerLeg:Remove()
-                    shoulderLine:Remove()
-                    hipLine:Remove()
-                    joseph:Disconnect()
-                end
+                    if isdead(childThatsAdded) then
+                        Head.Visible = false
+                        rightLowerArm.Visible = false
+                        leftLowerArm.Visible = false
+                        rightUpperArm.Visible = false
+                        leftUpperArm.Visible = false
+                        Torso.Visible = false
+                        rightUpperLeg.Visible = false
+                        leftUpperLeg.Visible = false
+                        rightLowerLeg.Visible = false
+                        leftLowerLeg.Visible = false
+                        shoulderLine.Visible = false
+                        hipLine.Visible = false
+                        Head:Remove()
+                        rightLowerArm:Remove()
+                        leftLowerArm:Remove()
+                        rightUpperArm:Remove()
+                        leftUpperArm:Remove()
+                        Torso:Remove()
+                        rightUpperLeg:Remove()
+                        leftUpperLeg:Remove()
+                        rightLowerLeg:Remove()
+                        leftLowerLeg:Remove()
+                        shoulderLine:Remove()
+                        hipLine:Remove()
+                        joseph:Disconnect()
+                    end
                 else
                     Head.Visible = false
                     rightLowerArm.Visible = false
