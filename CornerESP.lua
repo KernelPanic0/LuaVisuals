@@ -75,8 +75,8 @@ for i,v in pairs(game.Players:GetChildren()) do
                     local idkwtfimdoing = (1000 / RootPosition.Z)
                     --UPLEFT--
                     leftUpVertical.Visible = true
-                    leftUpVertical.From = Vector2.new(HeadPosition.X - idkwtfimdoing, HeadPosition.Y)
-                    leftUpVertical.To = Vector2.new(HeadPosition.X -idkwtfimdoing, HeadPosition.Y - idkwtfimdoing)
+                    leftUpVertical.From = Vector2.new(RootPosition.X - (idkwtfimdoing), HeadPosition.Y)
+                    leftUpVertical.To = Vector2.new(RootPosition.X - (idkwtfimdoing), HeadPosition.Y - idkwtfimdoing)
                 
                     leftUpHorizontal.Visible = true
                     leftUpHorizontal.From = Vector2.new(HeadPosition.X - (idkwtfimdoing/3), HeadPosition.Y - idkwtfimdoing)
@@ -87,8 +87,8 @@ for i,v in pairs(game.Players:GetChildren()) do
                     rightUpHorizontal.To = Vector2.new(HeadPosition.X + (idkwtfimdoing/3), HeadPosition.Y - idkwtfimdoing)
 
                     rightUpVertical.Visible = true
-                    rightUpVertical.From = Vector2.new(HeadPosition.X + idkwtfimdoing, HeadPosition.Y)
-                    rightUpVertical.To = Vector2.new(HeadPosition.X + idkwtfimdoing, HeadPosition.Y - idkwtfimdoing)
+                    rightUpVertical.From = Vector2.new(RootPosition.X + idkwtfimdoing, HeadPosition.Y)
+                    rightUpVertical.To = Vector2.new(RootPosition.X + idkwtfimdoing, HeadPosition.Y - idkwtfimdoing)
                     --DOWNLEFT--
                     leftDownVertical.Visible = true
                     leftDownVertical.From = Vector2.new(LegPosition.X - idkwtfimdoing, LegPosition.Y - idkwtfimdoing )

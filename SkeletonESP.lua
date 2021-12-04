@@ -476,18 +476,19 @@ plrs.ChildAdded:Connect(function(childThatsAdded)
                         hipLine.Visible = false
                     end
                 if isdead(childThatsAdded) then
-                    Head.Visible = false
-                    rightLowerArm.Visible = false
-                    leftLowerArm.Visible = false
-                    rightUpperArm.Visible = false
-                    leftUpperArm.Visible = false
-                    Torso.Visible = false
-                    rightUpperLeg.Visible = false
-                    leftUpperLeg.Visible = false
-                    rightLowerLeg.Visible = false
-                    leftLowerLeg.Visible = false
-                    shoulderLine.Visible = false
-                    hipLine.Visible = false
+                    Head:Remove()
+                    rightLowerArm:Remove()
+                    leftLowerArm:Remove()
+                    rightUpperArm:Remove()
+                    leftUpperArm:Remove()
+                    Torso:Remove()
+                    rightUpperLeg:Remove()
+                    leftUpperLeg:Remove()
+                    rightLowerLeg:Remove()
+                    leftLowerLeg:Remove()
+                    shoulderLine:Remove()
+                    hipLine:Remove()
+                    joseph:Disconnect()
                 end
                 else
                     Head.Visible = false
@@ -508,7 +509,3 @@ plrs.ChildAdded:Connect(function(childThatsAdded)
         coroutine.wrap(drawSkeleton)()
     end
 end)
-
-wait(30)
-
-_G.SkelESPToggle = false
